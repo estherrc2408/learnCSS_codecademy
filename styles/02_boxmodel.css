@@ -1,0 +1,17 @@
+/*
+Los navegadores abren los HTML con los elementos puestos por defecto en ciertas posiciones
+Si no queremos que se situen en estos espacios por defecto podemos establecer un modelo de cajas para posicionar los elementos donde queramos
+width
+height
+padding
+border
+margin
+overflow
+http://recursosformacion.com/wp-content/uploads/2014/08/estructuraSemantica.jpg
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fricardorubiosimon.wordpress.com%2F2014%2F11%2F14%2Fselectores-basicos-css-modelo-de-cajas%2F&psig=AOvVaw0tHskVOVXdT1Ou2Jj3CtsW&ust=1675782784706000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPDQpr-Xgf0CFQAAAAAdAAAAABAJ
+*/
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }

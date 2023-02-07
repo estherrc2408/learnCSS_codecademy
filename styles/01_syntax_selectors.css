@@ -1,0 +1,101 @@
+/*
+selectores: IDs are the most specific selector in CSS, followed by classes, and finally, type.
+* {}    (para cuando queremos seleccionar todo y aplicarle unos atributos)
+p {}    (para cuando queramos seleccionar por tipo de texto)
+.nombreclass {} (para cuando queremos seleccionar por clase)
+#nombreid {}    (para cuando queremos seleccionar por id)
+[nombreatributo] {}     (para cuando queremos seleccionar por atributo)
+        útil para las imágenes por ejemplo
+.nombreclase a {}   ejemplo(para cuando queremos seleccionar solo los a dentro de los textos de class="nombreclase")
+h5, p, li {}    ejemplo(para cuando queremos aplicar propiedades a varios selectores)
+
+declaraciones más comunes:
+color:
+    color: green;               cambiar a este color
+
+    border: 1px solid red;      1px anchura del borde, solid (podria ser discontinuo), red color
+
+    text-transform: uppercase;  transformar el texto en mayusculas
+
+    background-color: green;    subraya el texto en este color
+
+    opacity: 0.5;               opacidad de 0 a 1 siendo esto porcentajes
+
+fonts:    
+    font-family: cursive;       te pone el texto en comic-sans
+    pagina para fon-family  https://www.cssfontstack.com/
+
+    font-size: npx;             tamanio de la fuente
+
+    font-weight: bold;          ejemplo(para cuando queremos poner en negrita la letra)
+    otros valores: normal
+    
+    text-align: right;          ejemplo(para cuando queremos alinear el texto a la derecha)
+    otros valores: left, center, right, justify(alinear todo de derecha a izquierda poniendo espacios que no estan entre palabras)
+
+image:
+    background-image: url('http:/www.ejemplo.com');     utilizar una imagen de fondo dentro de uno de los apartados    
+
+pseudo clases con a:
+    a:hover {color: darkorange;}    cambia de color a darkorange cuando pasamos el cursor por encima
+    input:focus {}                  marca el borde del input cuando lo estamos utilizando
+    a:visited {}                    marca como visitado el enlace
+    input:disabled {}               deshabilita el input una vez usado
+    input:active {}                 activa el input cuando el forms está rellenado
+
+!important  para cuando hay colisiones entre propiedades que hemos puesto y queremos que se pongan por delante de las establecidas antes, esto es
+            util para cuando importamos un modelo css de otra pagina y queremos cambiar algo
+*/
+
+/*Múltiples clases,
+El título en h1 tiene de clase="titulo mayus"*/
+.titulo {
+    color:teal;
+}
+.mayus {
+    text-transform: uppercase;
+}
+
+/*Seleccionar por id
+La unordered list de italia tiene como id="litalia"*/
+#litalia {
+    font-family: cursive;
+}
+
+/*Seleccionar por atributo
+Las imagenes y videos tienen el atributo src incorporado siempre*/
+[src] {
+    height: 200px;
+    width: 200px;
+}
+/*tambien podemos concretar dentro del propio selector por atributo de la siguiente forma:
+img[src*='winter'] {
+                height: 50px;
+                    }
+una src que contenga la palabra winter
+*/
+
+/*Pseudo-class
+para que los enlaces cambien de color al poner el cursor encima*/
+a:hover {
+    color:darkorange;
+}
+
+p:hover {
+    background-color: lime;
+} /*cuando pasamos el cursor por encima de un <p> pone su fondo color lima*/
+
+/*Chaining (encadenamiento)
+ejemplo: h1.special {}      tan solo aplicará estas propiedades a los h1 con clase special, tendrá que cumplir ambas condiciones
+el h2 de Italia tiene como class="destino" */
+h2.destino {
+    font-family: cursive;
+}
+
+/*Descendant Combinator
+ejemplo: .main-list li {}   tan solo aplicará estas propiedades a los li pertenecientes a las listas con class="main.list"
+la lista de China tiene de id="lchina" 
+*/
+#lchina li{
+    color:pink /*pondrá en color rosa a todos los li de la lista id="lchina"*/
+}
